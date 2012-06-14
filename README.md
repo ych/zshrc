@@ -1,0 +1,4 @@
+zshrc
+=====
+
+ych's zshrc
