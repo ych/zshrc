@@ -35,3 +35,6 @@ plugins=(autojump bundle command-not-found debian gem git git-flow github gpg-ag
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+LANG=zh_TW.UTF-8
+LC_TIME=en_US.UTF-8
+LC_CTYPE=zh_TW.UTF-8
