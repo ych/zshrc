@@ -124,7 +124,7 @@ $PR_GREY)$PR_CYAN$PR_SHIFT_IN$PR_HBAR$PR_URCORNER$PR_SHIFT_OUT\
 
 $PR_CYAN$PR_SHIFT_IN$PR_LLCORNER$PR_BLUE$PR_HBAR$PR_SHIFT_OUT(\
 $PR_YELLOW%D{%a,%m/%d %H:%M}\
-$PR_LIGHT_BLUE%{$reset_color%}`git_prompt_info || vcs_prompt_info``git_prompt_status`$PR_BLUE)$PR_CYAN$PR_SHIFT_IN$PR_HBAR\
+$PR_LIGHT_BLUE%{$reset_color%}`git_prompt_info || vcs_prompt_info``git_prompt_status`$PR_BLUE)$PR_SHIFT_IN$PR_HBAR$PR_CYAN\
 $PR_SHIFT_IN$PR_HBAR$PR_SHIFT_OUT\
 >$PR_NO_COLOUR '
 
