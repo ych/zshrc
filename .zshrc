@@ -38,3 +38,7 @@ source $ZSH/oh-my-zsh.sh
 LANG=zh_TW.UTF-8
 LC_TIME=en_US.UTF-8
 LC_CTYPE=zh_TW.UTF-8
+
+if [ -d $HOME/bin ]; then
+	export PATH=$HOME/bin:$PATH
+fi
