@@ -42,3 +42,7 @@ LC_CTYPE=zh_TW.UTF-8
 if [ -d $HOME/bin ]; then
 	export PATH=$HOME/bin:$PATH
 fi
+
+if [ =d $HOME/go ]; then
+	export GOPATH=$HOME/go
+fi
