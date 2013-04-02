@@ -16,6 +16,7 @@ The configuration of ych's zsh
 * git
 * git-flow
 * github
+* golang
 * gpg-agent
 * heroku
 * history-substring-search
