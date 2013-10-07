@@ -30,7 +30,7 @@ ZSH_THEME="ych"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump bundle command-not-found debian gem git git-flow github golang gpg-agent heroku history-substring-search npm rvm ssh-agent vundle)
+plugins=(autojump bundle command-not-found debian gdoc gem git git-flow github gpg-agent heroku history-substring-search npm rvm ssh-agent vundle)
 
 source $ZSH/oh-my-zsh.sh
 
