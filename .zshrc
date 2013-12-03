@@ -39,6 +39,10 @@ LANG=zh_TW.UTF-8
 LC_TIME=en_US.UTF-8
 LC_CTYPE=zh_TW.UTF-8
 
+if [ `lsb_release -i -s` = "Debian" ]; then
+	export PATH=/usr/local/sbin:/usr/sbin:/sbin:$PATH
+fi
+
 if [ -d $HOME/bin ]; then
 	export PATH=$HOME/bin:$PATH
 fi
