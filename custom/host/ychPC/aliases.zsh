@@ -1,2 +1,6 @@
-alias sdqv="ssh root@dqv-build"
-alias ssa="ssh root@saki"
+alias sdq="ssh root@dqv-build"
+alias sv1="ssh root@ychvm1"
+alias sv2="ssh root@ychvm2"
+alias sv3="ssh root@ychvm3"
+alias sdn="ssh devnas"
+alias spb="ssh powerbuild"
