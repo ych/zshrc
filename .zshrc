@@ -30,7 +30,11 @@ ZSH_THEME="ych"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump bundle command-not-found debian gdoc gem git git-flow github gpg-agent heroku history-substring-search npm rvm ssh-agent vundle)
+plugins=(autojump git git-flow github gpg-agent history-substring-search ssh-agent vundle)
+
+#if [ balabala ]; then
+#	plugins+=(command-not-found debian)
+#fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,10 +42,6 @@ source $ZSH/oh-my-zsh.sh
 LANG=zh_TW.UTF-8
 LC_TIME=en_US.UTF-8
 LC_CTYPE=zh_TW.UTF-8
-
-if [ `lsb_release -i -s` = "Debian" ]; then
-	export PATH=/usr/local/sbin:/usr/sbin:/sbin:$PATH
-fi
 
 if [ -d $HOME/bin ]; then
 	export PATH=$HOME/bin:$PATH
