@@ -1,26 +1,20 @@
 # zshrc
 
-The configuration of ych's zsh
+My configuration of zsh
 
 ## Requirements
 
 * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
-### Using oh-my-zsh plugins
+### Used oh-my-zsh plugins
 
 * autojump
-* bundle
-* command-not-found
 * debian
-* gem
 * git
 * git-flow
 * github
 * golang
 * gpg-agent
-* heroku
 * history-substring-search
-* npm
-* rvm
 * ssh-agent
 * vundle

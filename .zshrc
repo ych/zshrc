@@ -36,7 +36,7 @@ plugins=(autojump git git-flow github gpg-agent history-substring-search ssh-age
 #	plugins+=(command-not-found debian)
 #fi
 
-# Use fresh go
+# Use fresh go if existed
 if [ -d $HOME/go/bin ]; then
         export GOROOT=$HOME/go
         export PATH=$GOROOT/bin:$PATH
@@ -44,6 +44,8 @@ fi
 
 go version &> /dev/null && plugins+=(golang)
 uname -v | grep -E "(Debian|Ubuntu)" &> /dev/null && plugins+=(debian)
+command-not-found &> /dev/null && plugins+=(command-not-found)
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
