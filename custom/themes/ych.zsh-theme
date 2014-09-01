@@ -33,7 +33,13 @@ theme_preexec () {
 }
 
 vcs_prompt_info () {
-    echo ${vcs_info_msg_0_}
+    if [[ `git_prompt_info` != "" ]]; then
+	echo ""`git_prompt_info``git_prompt_status`
+    elif [[ `hg_prompt_info` != "" ]]; then
+	echo ""`hg_prompt_info`
+    else
+	echo ${vcs_info_msg_0_}
+    fi
 }
 
 
@@ -71,6 +77,13 @@ setprompt () {
     ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} ➜"
     ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} ═"
     ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
+
+    ###
+    # Modify Mercurial prompt
+    ZSH_THEME_HG_PROMPT_PREFIX=" hg:%{$fg[green]%}"
+    ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"
+    ZSH_THEME_HG_PROMPT_DIRTY="%{$fg[red]%} ✖"
+    ZSH_THEME_HG_PROMPT_CLEAN=""
 
     ###
     # See if we can use extended characters to look nicer.
@@ -124,7 +137,7 @@ $PR_GREY)$PR_CYAN$PR_SHIFT_IN$PR_HBAR$PR_URCORNER$PR_SHIFT_OUT\
 
 $PR_CYAN$PR_SHIFT_IN$PR_LLCORNER$PR_BLUE$PR_HBAR$PR_SHIFT_OUT(\
 $PR_YELLOW%D{%a,%m/%d %H:%M}\
-$PR_LIGHT_BLUE%{$reset_color%}`git_prompt_info || vcs_prompt_info``git_prompt_status`$PR_BLUE)$PR_SHIFT_IN$PR_HBAR$PR_CYAN\
+$PR_LIGHT_BLUE%{$reset_color%}`vcs_prompt_info`$PR_BLUE)$PR_SHIFT_IN$PR_HBAR$PR_CYAN\
 $PR_SHIFT_IN$PR_HBAR$PR_SHIFT_OUT\
 >$PR_NO_COLOUR '
 

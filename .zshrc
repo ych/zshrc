@@ -30,7 +30,7 @@ ZSH_THEME="ych"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump git git-flow github gpg-agent history-substring-search ssh-agent vundle)
+plugins=(autojump git git-flow github gpg-agent history-substring-search mercurial ssh-agent vundle)
 
 #if [ balabala ]; then
 #	plugins+=(command-not-found debian)
@@ -39,6 +39,7 @@ plugins=(autojump git git-flow github gpg-agent history-substring-search ssh-age
 # Use fresh go if existed
 if [ -d $HOME/go/bin ]; then
         export GOROOT=$HOME/go
+	export GOPATH=$HOME/gopath
         export PATH=$GOROOT/bin:$PATH
 fi
 
