@@ -30,7 +30,7 @@ ZSH_THEME="ych"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump git git-flow github gpg-agent history-substring-search mercurial ssh-agent vundle)
+plugins=(autojump colored-man git git-flow github gpg-agent history-substring-search mercurial ssh-agent tmux vundle)
 
 #if [ balabala ]; then
 #	plugins+=(command-not-found debian)
