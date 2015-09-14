@@ -47,8 +47,9 @@ fi
 
 autojump -v &> /dev/null && plugins+=(autojump)
 git --version &> /dev/null && plugins+=(git github)
-#git flow version &> /dev/null && plugins+=(git-flow)
+git flow version &> /dev/null && plugins+=(git-flow)
 hg --version &> /dev/null && plugins+=(mercurial)
+svn --version &> /dev/null && plugins+=(svn svn-fast-info)
 tmux -V &> /dev/null && plugins+=(tmux)
 go version &> /dev/null && plugins+=(golang)
 uname -v | grep -E "(Debian|Ubuntu)" &> /dev/null && plugins+=(debian)

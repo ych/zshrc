@@ -34,11 +34,13 @@ theme_preexec () {
 
 vcs_prompt_info () {
     if [[ `git_prompt_info` != "" ]]; then
-	echo ""`git_prompt_info``git_prompt_status`
+        echo ""`git_prompt_info``git_prompt_status`
     elif [[ `hg_prompt_info` != "" ]]; then
-	echo ""`hg_prompt_info`
+        echo ""`hg_prompt_info`
+    elif [[ `svn_prompt_info` != "" ]]; then
+        echo ""`svn_prompt_info`
     else
-	echo ${vcs_info_msg_0_}
+        echo ${vcs_info_msg_0_}
     fi
 }
 
@@ -81,9 +83,16 @@ setprompt () {
     ###
     # Modify Mercurial prompt
     ZSH_THEME_HG_PROMPT_PREFIX=" hg:%{$fg[green]%}"
-    ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"
-    ZSH_THEME_HG_PROMPT_DIRTY="%{$fg[red]%} ✖"
-    ZSH_THEME_HG_PROMPT_CLEAN=""
+    ZSH_THEME_HG_PROMPT_SUFFIX=$ZSH_THEME_GIT_PROMPT_DIRTY
+    ZSH_THEME_HG_PROMPT_DIRTY=$ZSH_THEME_GIT_PROMPT_MODIFIED
+    ZSH_THEME_HG_PROMPT_CLEAN=$ZSH_THEME_GIT_PROMPT_CLEAN
+
+    ###
+    # Modify Svn prompt
+    ZSH_THEME_SVN_PROMPT_PREFIX=" svn:%{$fg[green]%}"
+    ZSH_THEME_SVN_PROMPT_SUFFIX=$ZSH_THEME_GIT_PROMPT_DIRTY
+    ZSH_THEME_SVN_PROMPT_DIRTY=$ZSH_THEME_GIT_PROMPT_MODIFIED
+    ZSH_THEME_SVN_PROMPT_CLEAN=$ZSH_THEME_GIT_PROMPT_CLEAN
 
     ###
     # See if we can use extended characters to look nicer.
