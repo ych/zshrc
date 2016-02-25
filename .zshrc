@@ -32,7 +32,7 @@ ZSH_TMUX_AUTOCONNECT="false"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colored-man gpg-agent history-substring-search ssh-agent vundle)
+plugins=(colored-man history-substring-search)
 
 # Use fresh go if existed
 if [ -d $HOME/go/bin ]; then
@@ -49,18 +49,18 @@ autojump -v &> /dev/null && plugins+=(autojump)
 git --version &> /dev/null && plugins+=(git github)
 git flow version &> /dev/null && plugins+=(git-flow)
 hg --version &> /dev/null && plugins+=(mercurial)
-svn --version &> /dev/null && plugins+=(svn svn-fast-info)
+svn --version &> /dev/null && plugins+=(svn-fast-info)
 tmux -V &> /dev/null && plugins+=(tmux)
 go version &> /dev/null && plugins+=(golang)
 uname -v | grep -E "(Debian|Ubuntu)" &> /dev/null && plugins+=(debian)
 command-not-found &> /dev/null && plugins+=(command-not-found)
+systemd --version &> /dev/null && plugins+=(systemd)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-LANG=zh_TW.UTF-8
-LC_TIME=en_US.UTF-8
-LC_CTYPE=zh_TW.UTF-8
+LANG=en_US.UTF-8
+LC_ALL=en_US.UTF-8
 
 if [ -d $HOME/bin ]; then
 	export PATH=$HOME/bin:$PATH
