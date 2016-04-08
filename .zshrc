@@ -34,27 +34,18 @@ ZSH_TMUX_AUTOCONNECT="false"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(colored-man history-substring-search)
 
-# Use fresh go if existed
-if [ -d $HOME/go/bin ]; then
-        export GOROOT=$HOME/go
-	export GOPATH=$HOME/gopath
-        export PATH=$GOROOT/bin:$PATH
-fi
-
 #if [ balabala ]; then
 #	plugins+=(command-not-found debian)
 #fi
 
 autojump -v &> /dev/null && plugins+=(autojump)
-git --version &> /dev/null && plugins+=(git github)
+git --version &> /dev/null && plugins+=(git)
 git flow version &> /dev/null && plugins+=(git-flow)
-hg --version &> /dev/null && plugins+=(mercurial)
-svn --version &> /dev/null && plugins+=(svn-fast-info)
-tmux -V &> /dev/null && plugins+=(tmux)
-go version &> /dev/null && plugins+=(golang)
-uname -v | grep -E "(Debian|Ubuntu)" &> /dev/null && plugins+=(debian)
+if [ -d $HOME/hub/bin ]; then
+	export PATH=$HOME/hub/bin:$PATH
+	hub --version &> /dev/null && plugins+=(github)
+fi
 command-not-found &> /dev/null && plugins+=(command-not-found)
-systemd --version &> /dev/null && plugins+=(systemd)
 
 source $ZSH/oh-my-zsh.sh
 
