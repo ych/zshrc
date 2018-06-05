@@ -38,6 +38,9 @@ plugins=(colored-man history-substring-search)
 #	plugins+=(command-not-found debian)
 #fi
 
+if [ -f $HOME/.ssh/id_rsa ]; then
+	plugins+=(ssh-agent)
+fi
 autojump -v &> /dev/null && plugins+=(autojump)
 git --version &> /dev/null && plugins+=(git)
 git flow version &> /dev/null && plugins+=(git-flow)
