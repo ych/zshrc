@@ -32,7 +32,7 @@ ZSH_TMUX_AUTOCONNECT="false"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colored-man history-substring-search)
+plugins=(colored-man-pages history-substring-search)
 
 #if [ balabala ]; then
 #	plugins+=(command-not-found debian)
