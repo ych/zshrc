@@ -100,6 +100,9 @@ source ${ZIM_HOME}/init.zsh
 # ------------------------------
 # Post-init module configuration
 # ------------------------------
+source ~/zshrc/custom/git.zsh
+source ~/zshrc/custom/gitfast.plugin.zsh
+source ~/zshrc/custom/ych.zsh-theme
 
 #
 # zsh-history-substring-search
@@ -121,6 +124,3 @@ bindkey '^N' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 # }}} End configuration added by Zim install
-source ~/zshrc/custom/git.zsh
-source ~/zshrc/custom/gitfast.plugin.zsh
-source ~/zshrc/custom/ych.zsh-theme
