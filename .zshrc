@@ -42,6 +42,7 @@ if [ -f $HOME/.ssh/id_rsa ]; then
 	plugins+=(ssh-agent)
 fi
 autojump -v &> /dev/null && plugins+=(autojump)
+docker -v &> /dev/null && plugins+=(docker)
 git --version &> /dev/null && plugins+=(git)
 git flow version &> /dev/null && plugins+=(git-flow)
 if [ -d $HOME/hub/bin ]; then
@@ -59,3 +60,17 @@ LC_ALL=en_US.UTF-8
 if [ -d $HOME/bin ]; then
 	export PATH=$HOME/bin:$PATH
 fi
+if [ -d /usr/local/go/bin ]; then
+	export PATH=/usr/local/go/bin:$PATH
+fi
+if [ -d $HOME/go/bin ]; then
+	export PATH=$HOME/go/bin:$PATH
+fi
+if [ -d $HOME/.tmuxifier/bin ]; then
+	export PATH=$PATH:$HOME/.tmuxifier/bin
+fi
+go version &> /dev/null && plugins+=(golang)
+
+export SSLKEYLOGFILE=~/.ssl-key.log
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
