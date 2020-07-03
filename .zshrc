@@ -100,9 +100,14 @@ source ${ZIM_HOME}/init.zsh
 # ------------------------------
 # Post-init module configuration
 # ------------------------------
+source ~/zshrc/custom/preload/git.zsh
+source ~/zshrc/custom/preload/git.plugin.zsh
+source ~/zshrc/custom/preload/gitfast.plugin.zsh
+source ~/zshrc/custom/themes/ych.zsh-theme
+source ~/zshrc/custom/aliases.zsh
 source ~/zshrc/custom/git.zsh
-source ~/zshrc/custom/gitfast.plugin.zsh
-source ~/zshrc/custom/ych.zsh-theme
+source ~/zshrc/custom/tmux.zsh
+source ~/zshrc/custom/xclip.zsh
 
 #
 # zsh-history-substring-search
