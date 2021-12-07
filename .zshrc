@@ -100,6 +100,7 @@ source ${ZIM_HOME}/init.zsh
 # ------------------------------
 # Post-init module configuration
 # ------------------------------
+ZSH_CUSTOM="$HOME/zshrc/custom"
 source ~/zshrc/custom/preload/git.zsh
 source ~/zshrc/custom/preload/git.plugin.zsh
 source ~/zshrc/custom/preload/gitfast.plugin.zsh
@@ -108,6 +109,10 @@ source ~/zshrc/custom/aliases.zsh
 source ~/zshrc/custom/git.zsh
 source ~/zshrc/custom/tmux.zsh
 source ~/zshrc/custom/xclip.zsh
+source ~/zshrc/custom/rust.zsh
+source ~/zshrc/custom/host.zsh
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US:en:C:zh_TW:zh
 
 #
 # zsh-history-substring-search
