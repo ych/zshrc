@@ -146,7 +146,7 @@ $PR_SHIFT_IN$PR_HBAR$PR_SHIFT_OUT\
 
     # display exitcode on the right when >0
     return_code="%(?..%{$fg[red]%}%? ↵ %{$reset_color%})"
-    RPROMPT=' $return_code$PR_CYAN$PR_SHIFT_IN$PR_HBAR$PR_BLUE$PR_CYAN$PR_LRCORNER$PR_SHIFT_OUT$PR_NO_COLOUR'
+    RPROMPT=' ${duration_info} $return_code$PR_CYAN$PR_SHIFT_IN$PR_HBAR$PR_BLUE$PR_CYAN$PR_LRCORNER$PR_SHIFT_OUT$PR_NO_COLOUR'
 
     PS2='$PR_CYAN$PR_SHIFT_IN$PR_HBAR$PR_SHIFT_OUT\
 $PR_BLUE$PR_SHIFT_IN$PR_HBAR$PR_SHIFT_OUT(\
@@ -160,3 +160,5 @@ autoload -U vcs_info
 autoload -U add-zsh-hook
 add-zsh-hook precmd  theme_precmd
 add-zsh-hook preexec theme_preexec
+add-zsh-hook precmd duration-info-precmd
+add-zsh-hook preexec duration-info-preexec
