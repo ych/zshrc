@@ -17,6 +17,11 @@ setopt HIST_IGNORE_ALL_DUPS
 #
 # Input/output
 #
+# TTY sends different key codes. Translate them to regular.
+bindkey '^[[1~'   beginning-of-line	# home       go to the beginning of line
+bindkey '^[[4~'   end-of-line		# end        go to the end of line
+bindkey '^[[1;3C' forward-word		# crtl+→     go to next word
+bindkey '^[[1;3D' backward-word		# ctrl+←     go to previous word
 
 # Set editor default keymap to emacs (`-e`) or vi (`-v`)
 bindkey -e
