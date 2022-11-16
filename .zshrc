@@ -116,6 +116,7 @@ source ~/zshrc/custom/tmux.zsh
 source ~/zshrc/custom/xclip.zsh
 source ~/zshrc/custom/rust.zsh
 source ~/zshrc/custom/host.zsh
+source ~/zshrc/custom/setenv.zsh
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US:en:C:zh_TW:zh
 
