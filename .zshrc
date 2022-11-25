@@ -105,7 +105,7 @@ if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
   fi
 fi
 # Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
-if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+if [[ ! ${ZIM_HOME}/init.zsh -nt `realpath ${ZDOTDIR:-${HOME}}/.zimrc` ]]; then
   source ${ZIM_HOME}/zimfw.zsh init -q
 fi
 # Initialize modules.
@@ -118,7 +118,6 @@ ZSH_CUSTOM=${ZDOTDIR:-${HOME}}/zshrc/custom
 source ~/zshrc/custom/themes/ych.zsh-theme
 source ~/zshrc/custom/aliases.zsh
 source ~/zshrc/custom/git.zsh
-source ~/zshrc/custom/xclip.zsh
 source ~/zshrc/custom/host.zsh
 source ~/zshrc/custom/setenv.zsh
 export LANG=en_US.UTF-8
