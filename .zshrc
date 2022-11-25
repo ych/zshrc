@@ -11,6 +11,12 @@
 # History
 #
 
+# Execute newer version zsh if exists
+if [[ -e ${HOME}/bin/zsh ]] && [[ -z "${IN_NEWER_ZSH_EXE}" ]]; then
+    export IN_NEWER_ZSH_EXE=1
+    exec ${HOME}/bin/zsh
+fi
+
 # Remove older command from the history if a duplicate is to be added.
 setopt HIST_IGNORE_ALL_DUPS
 
