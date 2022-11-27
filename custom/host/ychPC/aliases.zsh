@@ -1,1 +1,0 @@
-alias spb="ssh powerbuild"

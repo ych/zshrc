@@ -1,20 +1,9 @@
 # zshrc
 
-My configuration of zsh
+My configuration of zsh, and this branch is *DEPRECATED*, please refer zimfw branch
 
-## Requirements
+or use this command to clone zimfw branch
 
-* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-
-### Used oh-my-zsh plugins
-
-* autojump
-* debian
-* git
-* git-flow
-* github
-* golang
-* gpg-agent
-* history-substring-search
-* ssh-agent
-* vundle
+```
+git clone -b zimfw git@github.com:ych/zshrc.git
+```
