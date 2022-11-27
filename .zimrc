@@ -58,5 +58,7 @@ zmodule ohmyzsh/ohmyzsh --source lib/git.zsh
 zmodule ohmyzsh/ohmyzsh --source lib/clipboard.zsh
 zmodule ohmyzsh/ohmyzsh --root plugins/git
 #zmodule ohmyzsh/ohmyzsh --root plugins/git-prompt
+# For autojump
+zmodule ohmyzsh/ohmyzsh --root plugins/autojump
 # }}} End configuration added by Zim install
 
