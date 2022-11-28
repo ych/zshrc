@@ -128,6 +128,7 @@ source ~/zshrc/custom/host.zsh
 source ~/zshrc/custom/setenv.zsh
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US:en:C:zh_TW:zh
+export TZ='Asia/Taipei'
 
 #
 # zsh-history-substring-search

@@ -12,12 +12,12 @@ function theme_precmd {
     PR_PWDLEN=""
 
     local promptsize=${#${(%):---(%n@%m:%l)---()--}}
-    local pwdsize=${#${(%):-%~}}
+    local pwdsize=${#${(%):-%~ %D{%a %H:%M:%S %Z}}}
 
-    if [[ "$promptsize + $rubypromptsize + $pwdsize" -gt $TERMWIDTH ]]; then
-      ((PR_PWDLEN=$TERMWIDTH - $promptsize))
+    if [[ "$promptsize + $pwdsize" -gt $TERMWIDTH ]]; then
+      ((PR_PWDLEN=$TERMWIDTH - $promptsize ))
     else
-      PR_FILLBAR="\${(l.(($TERMWIDTH - ($promptsize + $rubypromptsize + $pwdsize)))..${PR_HBAR}.)}"
+      PR_FILLBAR="\${(l.(($TERMWIDTH - ($promptsize + $pwdsize)))..${PR_HBAR}.)}"
     fi
 }
 
@@ -133,13 +133,12 @@ setprompt () {
 
     PROMPT='$PR_SET_CHARSET$PR_STITLE${(e)PR_TITLEBAR}\
 $PR_CYAN$PR_SHIFT_IN$PR_ULCORNER$PR_HBAR$PR_SHIFT_OUT$PR_GREY(\
-$PR_GREEN%$PR_PWDLEN<...<%~%<<\
-$PR_GREY)$PR_CYAN$PR_SHIFT_IN$PR_HBAR$PR_HBAR${(e)PR_FILLBAR}$PR_HBAR$PR_SHIFT_OUT$PR_GREY(\
+$PR_GREEN%$PR_PWDLEN<...<%~%<< \
+$PR_YELLOW%D{%a %H:%M:%S %Z}$PR_GREY)$PR_CYAN$PR_SHIFT_IN$PR_HBAR$PR_HBAR${(e)PR_FILLBAR}$PR_HBAR$PR_SHIFT_OUT$PR_GREY(\
 $PR_CYAN%(!.%SROOT%s.%n)$PR_GREY@$PR_GREEN%m:%l\
 $PR_GREY)$PR_CYAN$PR_SHIFT_IN$PR_HBAR$PR_URCORNER$PR_SHIFT_OUT\
 
 $PR_CYAN$PR_SHIFT_IN$PR_LLCORNER$PR_BLUE$PR_HBAR$PR_SHIFT_OUT(\
-$PR_YELLOW%D{%a %H:%M:%S}\
 $PR_LIGHT_BLUE%{$reset_color%}`vcs_prompt_info`$PR_BLUE)$PR_SHIFT_IN$PR_HBAR$PR_CYAN\
 $PR_SHIFT_IN$PR_HBAR$PR_SHIFT_OUT\
 >$PR_NO_COLOUR '
