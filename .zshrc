@@ -126,6 +126,7 @@ source ~/zshrc/custom/aliases.zsh
 source ~/zshrc/custom/git.zsh
 source ~/zshrc/custom/host.zsh
 source ~/zshrc/custom/setenv.zsh
+source ~/zshrc/custom/timezone.zsh
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US:en:C:zh_TW:zh
 export TZ='Asia/Taipei'
