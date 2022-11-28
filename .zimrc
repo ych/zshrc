@@ -55,9 +55,11 @@ zmodule zsh-users/zsh-autosuggestions
 # For git
 zmodule ohmyzsh/ohmyzsh --use degit
 zmodule ohmyzsh/ohmyzsh --source lib/git.zsh
-zmodule ohmyzsh/ohmyzsh --source lib/clipboard.zsh
 zmodule ohmyzsh/ohmyzsh --root plugins/git
-#zmodule ohmyzsh/ohmyzsh --root plugins/git-prompt
+zmodule ohmyzsh/ohmyzsh --root plugins/git-prompt
+# For clip
+zmodule ohmyzsh/ohmyzsh --source lib/clipboard.zsh
+zmodule ohmyzsh/ohmyzsh --root plugins/copybuffer
 # For autojump
 zmodule ohmyzsh/ohmyzsh --root plugins/autojump
 # }}} End configuration added by Zim install
