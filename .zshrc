@@ -12,8 +12,8 @@
 #
 
 # Execute newer version zsh if exists
-if [[ -e ${HOME}/bin/zsh ]] && [[ -z "${IN_NEWER_ZSH_EXE}" ]]; then
-    export IN_NEWER_ZSH_EXE=1
+if [[ ${SHELL} != "${HOME}/bin/zsh" ]] && [[ -e ${HOME}/bin/zsh ]] ; then
+    export SHELL=${HOME}/bin/zsh
     exec ${HOME}/bin/zsh
 fi
 
