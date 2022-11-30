@@ -1,0 +1,3 @@
+[submodule "custom/host"]
+	path = custom/host
+	url = git@github.com:ych/zshrc_host.git
