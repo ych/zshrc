@@ -6,5 +6,5 @@ if (( $+commands[rg] )); then
     alias grep=rg
 fi
 if (( $+commands[tmux] )); then
-    alias tmux='noglob tmux new -As0'
+    alias t='tmux new -As0'
 fi
