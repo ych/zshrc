@@ -13,4 +13,8 @@ My configuration of zsh
 
 # Q&A
 - Where can I put the host-specific setting?
-  - custom/host/`hostname`.zsh
+  - general setting in specific domain
+    - custom/host/`hostname -d`/
+  - host-specific setting
+    - custom/host/`hostname -d`/`hostname`/
+
