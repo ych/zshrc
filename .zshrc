@@ -11,6 +11,9 @@
 # History
 #
 
+# Set clear path
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+
 # Execute newer version zsh if exists
 if [[ ${SHELL} != "${HOME}/bin/zsh" ]] && [[ -e ${HOME}/bin/zsh ]] ; then
     export SHELL=${HOME}/bin/zsh
@@ -127,10 +130,11 @@ source $ZSH_CUSTOM/git.zsh
 source $ZSH_CUSTOM/host.zsh
 source $ZSH_CUSTOM/setenv.zsh
 source $ZSH_CUSTOM/timezone.zsh
-source $ZSH_CUSTOM/zshrc/custom/autoenv.zsh
+source $ZSH_CUSTOM/autoenv.zsh
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US:en:C:zh_TW:zh
 export TZ='Asia/Taipei'
+#export PATH=`~/bin/remove_duplicate_path`
 
 #
 # zsh-history-substring-search
