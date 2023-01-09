@@ -121,13 +121,13 @@ source ${ZIM_HOME}/init.zsh
 # Post-init module configuration
 # ------------------------------
 ZSH_CUSTOM=${ZDOTDIR:-${HOME}}/zshrc/custom
-source ~/zshrc/custom/themes/ych.zsh-theme
-source ~/zshrc/custom/aliases.zsh
-source ~/zshrc/custom/git.zsh
-source ~/zshrc/custom/host.zsh
-source ~/zshrc/custom/setenv.zsh
-source ~/zshrc/custom/timezone.zsh
-source ~/zshrc/custom/autoenv.zsh
+source $ZSH_CUSTOM/themes/ych.zsh-theme
+source $ZSH_CUSTOM/aliases.zsh
+source $ZSH_CUSTOM/git.zsh
+source $ZSH_CUSTOM/host.zsh
+source $ZSH_CUSTOM/setenv.zsh
+source $ZSH_CUSTOM/timezone.zsh
+source $ZSH_CUSTOM/zshrc/custom/autoenv.zsh
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US:en:C:zh_TW:zh
 export TZ='Asia/Taipei'
