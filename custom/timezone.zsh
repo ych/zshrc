@@ -11,4 +11,4 @@ function JP(){ TIMEZONE Japan $@ }
 function UTC(){ TIMEZONE UTC $@ }
 function TW(){ TIMEZONE ROC $@ }
 function ROC(){ TIMEZONE ROC $@ }
-function PAC(){ TIMEZONE Pacific $@ }
+function PST(){ TIMEZONE PST8PDT $@ }
