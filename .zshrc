@@ -45,6 +45,8 @@ WORDCHARS=${WORDCHARS//[\/]}
 
 # Use degit instead of git as the default tool to install and update modules.
 #zstyle ':zim:zmodule' use 'degit'
+# Let completion not hang out
+zstyle ':zim:completion' case-sensitivity sensitive
 
 # --------------------
 # Module configuration
